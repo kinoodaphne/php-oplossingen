@@ -1,0 +1,143 @@
+body {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat';
+	margin: 0;
+	background-color: #333;
+}
+
+.messenger {
+	width: 450px;
+	border-radius: 8px 8px 0 0;
+	height: 670px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: orange;
+}
+
+.top, footer {
+	display: flex;
+	align-items: center;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+	z-index: 9;
+	cursor: pointer;
+}
+
+.images {
+	width: 50px;
+	height: 50px;
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.images img{
+	text-align: center;
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+}
+
+.username {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.location {
+	font-size: 14px;
+	color: grey;
+}
+
+.comment {
+ font-size: 18px;
+ color: orange;
+}
+
+.item1 {
+  grid-area: myArea;
+}
+
+.grid-container {
+	width: 450px;
+  display: grid;
+  grid-template-areas: 'myArea . . .';
+  grid-gap: 10px;
+  padding: 5px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+
+.top .photo {
+	margin: 10px 20px;
+	height: 50px;
+	width: 50px;
+	background: url('https://api.adorable.io/avatars/50/abott@adorable.png');
+	border-radius: 50%;
+}
+
+.top h2 {
+	margin: 0;
+	font-size: 18px;
+}
+
+.messages-container {
+	height: 350px;
+	background-color: white;
+	flex: 1;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.post__comment {
+	padding-left: 15px;
+}
+
+.messages-container>div {
+	border: 1px solid #FFF;
+	border-left-width: 20px;
+	display: flex;
+	overflow: hidden;
+}
+
+.messages-container>div:first-child {
+	border-top-width: 20px;
+}
+
+.messages-container>div:last-child {
+	border-bottom-width: 20px;
+}
+
+.messages-container>div div:first-child {
+	padding: 10px 15px;
+	border-radius: 20px;
+	max-width: 180px;
+	z-index: 4;
+	position: relative;
+	font-size: 14px;
+}
+
+.messages-container>div div:first-child:before {
+	content: "";
+	display: block;
+	border: 30px solid #FFF;
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	left: -30px;
+	bottom: -30px;
+	border-radius: 55px;
+	z-index: 2;
+}
+
+.messages-container>div div:last-child {
+	flex: 1 1 0%;
+	background-color: #FFF;
+}
